@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaEscolarApi", "AgendaEscolarApi\AgendaEscolarApi.csproj", "{B2AD2D81-344B-46AD-AAC1-D86917D8A593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B2AD2D81-344B-46AD-AAC1-D86917D8A593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2AD2D81-344B-46AD-AAC1-D86917D8A593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2AD2D81-344B-46AD-AAC1-D86917D8A593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2AD2D81-344B-46AD-AAC1-D86917D8A593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9ED5D59E-07A4-4B92-9ACF-04B29BE6F974}
+	EndGlobalSection
+EndGlobal
