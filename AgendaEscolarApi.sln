@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaEscolarApi", "AgendaEscolarApi\AgendaEscolarApi.csproj", "{B2AD2D81-344B-46AD-AAC1-D86917D8A593}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaEscolarApi", "AgendaEscolarApi\AgendaEscolarApi.csproj", "{B2AD2D81-344B-46AD-AAC1-D86917D8A593}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Domain", "Domain\Domain.csproj", "{56A014A7-6FCC-4ECB-955D-A3B2F1F5E39B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{7049997C-6CA0-4B8E-AEC2-9305D3CFC6B1}"
+	ProjectSection(SolutionItems) = preProject
+		heroku.yml = heroku.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
