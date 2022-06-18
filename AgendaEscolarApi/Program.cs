@@ -21,12 +21,9 @@ builder.Services.AddSwaggerGen();
 var app = builder.Build();
 await AsseguraDBExiste(app.Services, app.Logger);
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseSwagger();
+app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 
