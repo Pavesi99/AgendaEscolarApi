@@ -6,12 +6,12 @@ namespace AgendaEscolarApi.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class AgendamentoController : ControllerBase
+    public class MateriaController : ControllerBase
     {
-        private readonly ILogger<AgendamentoController> _logger;
+        private readonly ILogger<MateriaController> _logger;
         private readonly AgendaEscolarDbContext _dbContext;
 
-        public AgendamentoController(ILogger<AgendamentoController> logger, AgendaEscolarDbContext dbContext)
+        public MateriaController(ILogger<MateriaController> logger, AgendaEscolarDbContext dbContext)
         {
             _logger = logger;
             _dbContext = dbContext;
@@ -19,42 +19,41 @@ namespace AgendaEscolarApi.Controllers
 
         [HttpGet]
         [Route("buscar")]
-        public IEnumerable<Agendamento> Get()
+        public IEnumerable<Materia> Get()
         {
-            return _dbContext.Agendamentos.ToList();
+            return _dbContext.Materias.ToList();
         }
 
         [Route("delete/{id}")]
         [HttpDelete]
         public bool Delete([FromRoute] int id)
         {
-            var Agendamento = _dbContext.Agendamentos.FirstOrDefault(x => x.Id == id);
-            if(Agendamento == null)
+            var materia = _dbContext.Materias.FirstOrDefault(x => x.Id == id);
+            if(materia == null)
             {
                 return false;
             }
-            _dbContext.Agendamentos.Remove(Agendamento);
+            _dbContext.Materias.Remove(materia);
             _dbContext.SaveChanges();
             return true;
         }
 
         [HttpPost]
         [Route("adicionar")]
-        public Agendamento Add([FromBody] Agendamento Agendamento)
+        public Materia Add([FromBody] Materia materia)
         {
-            _dbContext.Agendamentos.Add(Agendamento);
+            _dbContext.Materias.Add(materia);
             _dbContext.SaveChanges();
-            return Agendamento;
+            return materia;
         }
 
         [HttpPut]
         [Route("editar")]
-        public Agendamento Edit([FromBody] Agendamento Agendamento)
+        public Materia Edit([FromBody] Materia materia)
         {
-            var AgendamentoDb = _dbContext.Agendamentos.FirstOrDefault(x => x.Id == Agendamento.Id);
-            AgendamentoDb = Agendamento;
+             _dbContext.Materias.Update(materia);
             _dbContext.SaveChanges();
-            return Agendamento;
+            return materia;
         }
     }
 }

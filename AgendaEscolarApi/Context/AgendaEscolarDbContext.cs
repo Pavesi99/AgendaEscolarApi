@@ -15,6 +15,7 @@ public class AgendaEscolarDbContext : DbContext
     {
         builder.Entity<Professor>().ToTable("Professor").HasKey(m => m.Id);
         builder.Entity<Materia>().ToTable("Materia").HasKey(m => m.Id);
+        builder.Entity<Agendamento>().ToTable("Agendamento").HasKey(m => m.Id);
 
         base.OnModelCreating(builder);
     }

@@ -51,8 +51,7 @@ namespace AgendaEscolarApi.Controllers
         [Route("editar")]
         public Professor Edit([FromBody] Professor professor)
         {
-            var professorDb = _dbContext.Professores.FirstOrDefault(x => x.Id == professor.Id);
-            professorDb = professor;
+            _dbContext.Professores.Update(professor);
             _dbContext.SaveChanges();
             return professor;
         }
